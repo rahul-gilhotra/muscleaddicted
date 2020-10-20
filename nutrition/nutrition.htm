@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>
+            Nutrition
+        </title>
+        <style>
+            *{
+                background-image: url("45649.jpg");
+                color: aliceblue;
+                font-size: 21px;
+            }
+            img:hover
+            {
+                transform: scale(1.1, 1.07);
+            }
+        </style>
+        <script>
+            function computeBMI()
+        {
+            //Obtain user inputs
+            var height=Number(document.getElementById("height").value);
+            var heightunits=document.getElementById("heightunits").value;
+            var weight=Number(document.getElementById("weight").value);
+            var weightunits=document.getElementById("weightunits").value;
+
+
+            //Convert all units to metric
+            if (heightunits=="inches") height/=39.3700787;
+            if (weightunits=="lb") weight/=2.20462;
+
+            //Perform calculation
+            var BMI=weight/Math.pow(height,2);
+
+            //Display result of calculation
+            document.getElementById("answer").innerText=Math.round(BMI*100)/100;
+            if(answer.innerText < 18.5){
+                alert("That you are underweight");
+                document.getElementById("output").innerText = "Underweight";
+            }
+            if(answer.innerText > 18.5 && answer.innerText < 25){
+                alert("That you are normal");
+                document.getElementById("output").innerText = "Normal";
+            }
+            if(answer.innerText > 25){
+                alert("That you are overweight");
+                document.getElementById("output").innerText = "Overweight";
+            }
+            
+        }
+        </script>
+    </head>
+    <body>
+    <div style="position: absolute; top:100px;left:400px;">
+
+    
+        <h1>Body Mass Index Calculator</h1>
+    <p>Enter your height: <input type="text" id="height"/>
+        <select type="multiple" id="heightunits">
+            <option value="metres" >metres</option>
+            <option value="inches" selected="selected">inches</option>
+        </select>
+    </p>
+    <p>Enter your weight: <input type="text" id="weight"/>
+        <select type="multiple" id="weightunits">
+            <option value="kg" selected="selected">kilograms</option>
+            <option value="lb">pounds</option>
+        </select>
+    </p>
+    <input type="submit" value="computeBMI" onclick="computeBMI();">
+    <h1>Your BMI is: <span id="answer">?</span></h1>
+
+    <h2>This means you are: <span id="output">?</span> </h2> 
+    
+    </div>
+    <div style="position: absolute; top:440px;left:40px;">
+            Nutritional information of needed things :
+            <br><br>
+            Fruits : -
+            <PRE>       BANANA                        KIWI                         APPLE                       AVOCADO </PRE>
+            
+            <a href="bananaw.htm"><img src="bananap.jpg" width="240px" height="150px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="kiwiw.htm"><img src="kiwip.jpg" width="240px" height="150px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="applew.htm"><img src="applep.jpg" width="240px" height="150px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="avocadow.htm"><img src="avocadop.jpg" width="240px" height="150px"></a>
+            <BR><BR><BR><BR>
+            <PRE>       POMEGRANATE                   COCONUT                  WATERMELON                      GUAVA </PRE>
+            
+            <a href="pomegranatew.htm"><img src="pomegranate.jpg" width="240px" height="150px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="coconutw.htm"><img src="coconutp.jpg" width="240px" height="150px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="watermelonw.htm"><img src="watermelonp.jpg" width="240px" height="150px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="guavaw.htm"><img src="guavap.jpg" width="240px" height="150px"></a>
+
+            <BR><BR><BR><BR><BR><BR>
+                other's : -
+                <BR><BR>
+            <PRE>       EGG                         CHAPATI                    MILK              BROWN BREAD </PRE>
+            
+            <a href="eggw.htm"><img src="eggp.jpg" width="240px" height="150px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="chapatiw.htm"><img src="chapatip.jpg" width="240px" height="150px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="milkw.htm"><img src="milkp.jpg" width="240px" height="150px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="brownbreadw.htm"><img src="brownbreadp.jpg" width="240px" height="150px">
+            <BR><BR><BR><BR>
+            <PRE>    PEANUT BUTTER                   PEANUTS                  CHICKEN                     OATS </PRE>
+            
+            <a href="peanutbutterw.htm"><img src="peanutbutterp.jpg" width="240px" height="150px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="peanutsw.htm"><img src="peanuts.jpg" width="240px" height="150px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="chickenw.htm"><img src="chickenp.jpg" width="240px" height="150px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="oatsw.htm"><img src="oats.jpg" width="240px" height="150px"></a>
+    </div>
+
+</body>
+</html>
